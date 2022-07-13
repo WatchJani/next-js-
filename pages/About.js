@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 
 export async function getServerSideProps() {
-    const res = await fetch("http://localhost:5000/api/v1/all")
+    const res = await fetch("https://jani-netflix.herokuapp.com/api/v1/all")
     const data = await res.json()
 
     return {
@@ -31,6 +31,7 @@ const About = ({ movies }) => {
                             priority
                             width={1280}
                             height={810}
+
                         />
                         <h1>{movies.name}</h1>
                         <p>{movies.description}</p>
