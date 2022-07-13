@@ -16,7 +16,7 @@ export async function getServerSideProps() {
 
 const About = ({ movies }) => {
 
-    console.log(movies)
+  
 
     return (
         <>
