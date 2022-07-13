@@ -20,23 +20,24 @@ const About = ({ movies }) => {
 
     return (
         <>
+
             <Link href="/">home</Link>
             <div>About</div>
             {movies?.length == 0 ? (<div>loading...</div>) : (movies.map((movies) => {
                 return (
                     <Container key={movies._id}>
-                            <Image
-                                src={movies.banner}
-                                alt={movies.name}
-                                width={1280}
-                                height={810}
-                                loading="lazy"
-                                layout="responsive"
-                                blurDataURL
-                                placeholder="blur"
-                            />
-                            <h1>{movies.name}</h1>
-                            <p>{movies.description}</p>
+                        <Image
+                            src={movies.banner}
+                            alt={movies.name}
+                            width={1280}
+                            height={810}
+                            loading="lazy"
+                            layout="responsive"
+                            blurDataURL
+                            placeholder="blur"
+                        />
+                        <h1>{movies.name}</h1>
+                        <p>{movies.description}</p>
                     </Container>
                 )
             }))
