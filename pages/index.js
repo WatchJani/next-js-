@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from "next/link"
 
 
 export async function getServerSideProps() {
@@ -23,7 +24,7 @@ export default function Home({ todose }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
+          <Link href="/About">about</Link>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
